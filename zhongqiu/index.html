@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	
+    <title>中秋节赢好礼</title>
+	<link rel="stylesheet" href="css/手机端重置.css">
+</head>
+	
+<body>
+    <div class="music-icon abs rotate"></div>
+    <audio id="musicbox" src="music/music.mp3" loop autoplay></audio>
+    <img src="images/logo.png" class="index-logo abs" alt="">
+     <img src="images/tree.png" class="index-tree1 abs" alt="">
+     <div class="rel index-container">
+     	<img src="images/moon.png" class="index-moon" alt="">
+     	<img src="images/girl1.png" class="index-girl abs" alt="">
+     	<img src="images/big-logo.png" class="index-title abs" alt="">
+     </div>
+     	<!--用户交互区> 用于展示的区域  -->
+      <div class="index-bottom">
+     	<img src="images/gift.png" class="gifts-img " alt="">
+     	<img src="images/btn1.png" class="start-btn " alt="">
+     	<center><u class="act-btn">活动说明</u></center>
+     </div>
+<script>
+	var musicIcon = document.getElementsByClassName("music-icon")[0];
+	var musicbox = document.getElementById("musicbox");
+	musicIcon.onclick = function(){
+		
+		if( musicIcon.className == "music-icon abs rotate"){
+			musicbox.pause();
+            musicIcon.className = "music-icon abs paused";
+    }else{
+            musicbox.play();
+            musicIcon.className = "music-icon abs rotate";
+           }
+		}
+</script>	
+		
+
+
+
+</body>
+</html>
+
