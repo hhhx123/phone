@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	
+    <title>摇一摇</title>
+    <script src="js/jquery-1.11.3.js"></script>
+	<link rel="stylesheet" href="css/gloable.css">
+	<link rel="stylesheet" href="css/index.css">
+
+
+</head>
+	
+<body>
+<div class="music-icon abs rotate"></div>
+    <audio id="musicbox" src="music/music.mp3" loop autoplay></audio>
+<img class="circle-header abs" src="images/circle-header.png" alt="">
+<img class="index-logo abs" src="images/logo.png" alt="">
+
+<div class="container abs">
+    <img class="container-title abs" src="images/title.png" alt="">	
+    <img class="maozi abs " src="images/maozi .png" alt="">
+</div>
+<img src="images/" alt="">
+
+
+<img  class="bubble abs" src="images/img2.png" alt="">
+
+<div class="box abs">
+    <img class="circle abs" src="images/circle.png" alt="">
+	<img class="hand abs" src="images/hand.png" alt="">
+</div>
+<img class="img1 abs" src="images/img1.png" alt="">
+<img class="snow-flower abs" src="images/snow-flower.png" alt="">
+<img class="snow abs" src="images/snow.png" alt="">
+<div class="txt abs">
+	<p class="txt1">您还有<span class="span">2</span>次抽奖机会</p>
+</div>
+
+<p class="txt2 abs">摇一摇</p>
+<img class="icon-hand" src="images/icon-hand.png" alt="">
+
+<img class="footer abs" src="images/footer.png" alt="">
+
+
+<div class="win abs">
+<img class="img3 abs" src="images/img-3.png" alt="">	
+<img class="window abs" src="images/window.png" alt="">
+</div>
+
+<script>
+	var musicIcon = document.getElementsByClassName("music-icon")[0];
+	var musicbox = document.getElementById("musicbox");
+	musicIcon.onclick = function(){
+	if( musicIcon.className == "music-icon abs rotate"){
+			musicbox.pause();
+            musicIcon.className = "music-icon abs paused";
+    }else{
+            musicbox.play();
+            musicIcon.className = "music-icon abs rotate";
+           }
+		}
+   $(function(){
+
+  $(".hand").click(function(){
+     $(".win").show();
+   });
+   $(".win").click(function(){
+   	$(this).hide();
+   });
+})
+  
+
+</script>
+</body>	
+</html>
+
